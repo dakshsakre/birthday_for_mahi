@@ -355,14 +355,19 @@ p {
   color: rgba(230, 238, 243, 0.95);
 }
 
-/* ===== PHOTO GRID ===== */
-.photo-grid {
-  margin-top: 50px;
-  display: grid;
-  grid-template-columns: repeat(2, 160px);
-  grid-template-rows: repeat(2, 160px);
+/* ===== PHOTO ROWS ===== */
+.photo-row {
+  display: flex;
   gap: 24px;
   justify-content: center;
+}
+
+.top-photos {
+  margin-bottom: 28px;
+}
+
+.bottom-photos {
+  margin-top: 40px;
 }
 
 /* Base photo style */
@@ -372,24 +377,21 @@ p {
   object-fit: cover;
   border-radius: 18px;
   box-shadow: 0 20px 40px rgba(0,0,0,0.45);
-  transition: transform 0.3s ease;
 }
 
-/* Diagonal positioning */
+/* Diagonal effect */
 .photo.p1 {
-  transform: rotate(-6deg) translateY(-10px);
+  transform: rotate(-6deg) translateY(6px);
 }
 
 .photo.p2 {
-  transform: rotate(6deg) translateY(-10px);
+  transform: rotate(6deg) translateY(6px);
 }
 
 .photo.p3 {
-  transform: rotate(6deg) translateY(10px);
+  transform: rotate(6deg) translateY(-6px);
 }
 
 .photo.p4 {
-  transform: rotate(-6deg) translateY(10px);
+  transform: rotate(-6deg) translateY(-6px);
 }
-
-
