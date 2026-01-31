@@ -355,4 +355,41 @@ p {
   color: rgba(230, 238, 243, 0.95);
 }
 
+/* ===== PHOTO GRID ===== */
+.photo-grid {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(2, 160px);
+  grid-template-rows: repeat(2, 160px);
+  gap: 24px;
+  justify-content: center;
+}
+
+/* Base photo style */
+.photo {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 18px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.45);
+  transition: transform 0.3s ease;
+}
+
+/* Diagonal positioning */
+.photo.p1 {
+  transform: rotate(-6deg) translateY(-10px);
+}
+
+.photo.p2 {
+  transform: rotate(6deg) translateY(-10px);
+}
+
+.photo.p3 {
+  transform: rotate(6deg) translateY(10px);
+}
+
+.photo.p4 {
+  transform: rotate(-6deg) translateY(10px);
+}
+
 
