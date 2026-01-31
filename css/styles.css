@@ -1,0 +1,316 @@
+/* Reset & Base Styles */
+* {
+  margin: 10px 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #181c24;
+  color: #f3f3f3;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+/* Container Styles */
+.container {
+  width: 100%;
+  max-width: 1000px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+/* Cake Container */
+#cake-container {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  margin: 40px 0 20px; /* Reduced bottom margin */
+}
+
+#cake-svg-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
+  z-index: 1;
+}
+
+/* Candle Styles */
+#cake-candle-canvas {
+  position: absolute;
+  left: 50%;
+  top: -70px;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 140px;
+  z-index: 2;
+  background: transparent;
+  filter: 
+    drop-shadow(0 0 15px rgba(255, 237, 133, 0.7))
+    drop-shadow(0 0 30px rgba(255, 213, 0, 0.5));
+  transition: all 0.3s ease;
+}
+
+#cake-candle-canvas.candle-off {
+  filter: none;
+  opacity: 0.8;
+}
+
+/* Text Content Container - NEW */
+.text-content {
+  width: 100%;
+  max-width: 500px;
+  margin-top: -20px; /* Pull up slightly */
+  padding: 0 20px;
+  position: relative;
+  z-index: 3;
+}
+
+/* Enhanced Text & Messages - MOVED BELOW CAKE */
+#congrats-message {
+  font-size: 1.4rem;
+  color: #ffe082;
+  font-weight: 600;
+  margin: 10px 0; /* Reduced margin */
+  text-align: center;
+  line-height: 1.5;
+  display: block;
+  margin-top: 300px;
+  animation: 
+    fadeIn 0.8s ease-out,
+    subtleGlow 2s ease-in-out infinite alternate;
+  text-shadow: 
+    0 2px 4px rgba(0, 0, 0, 0.3),
+    0 0 10px rgba(255, 224, 130, 0.3);
+}
+
+#celebrate-message {
+  font-size: 1.5rem;
+  color: #ff4081;
+  font-weight: 700;
+  margin: 10px 0 15px; /* Reduced margin */
+  text-align: center;
+  display: none;
+  animation: 
+    popIn 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55),
+    float 3s ease-in-out infinite;
+  text-shadow: 
+    0 2px 4px rgba(0, 0, 0, 0.3),
+    0 0 12px rgba(255, 64, 129, 0.4);
+}
+
+.container h2 {
+  color: #ffe082;
+  margin: 10px 0 5px; /* Reduced margin */
+  font-size: 1.5rem;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.container p {
+  color: #b0bec5;
+  font-size: 1.1rem;
+  margin-bottom: 8px; /* Reduced margin */
+}
+
+/* Buttons */
+.btn-main {
+  background: linear-gradient(135deg, #ff4081 0%, #ff9100 100%);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 12px 35px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 15px; /* Reduced margin */
+  box-shadow: 0 5px 15px rgba(255, 64, 129, 0.4);
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.btn-main:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(255, 64, 129, 0.6);
+}
+
+.btn-secondary {
+  background: linear-gradient(135deg, #4a00e0 0%, #8e2de2 100%);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 10px 30px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 10px; /* Reduced margin */
+  box-shadow: 0 4px 12px rgba(74, 0, 224, 0.3);
+  transition: all 0.3s ease;
+  display: none;
+}
+
+.btn-secondary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(74, 0, 224, 0.4);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes popIn {
+  0% { transform: scale(0.5); opacity: 0; }
+  70% { transform: scale(1.1); }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes subtleGlow {
+  0% { text-shadow: 0 2px 4px rgba(0,0,0,0.3), 0 0 10px rgba(255,224,130,0.3); }
+  100% { text-shadow: 0 2px 6px rgba(0,0,0,0.4), 0 0 15px rgba(255,224,130,0.5); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+/* Enhanced Greeting Card - POSITION ADJUSTED */
+.greeting-card {
+  position: absolute;
+  left: 50%;
+  top: 60%; /* Adjusted to appear lower */
+  transform: translate(-50%, -50%);
+  z-index: 15;
+  width: 90%;
+  max-width: 420px;
+  pointer-events: none;
+  opacity: 0;
+  transition: 
+    opacity 0.5s ease-out,
+    transform 0.5s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+  perspective: 1200px;
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
+}
+
+.greeting-card.show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.card-front {
+  background: linear-gradient(135deg, #fff9f0 0%, #fff3e0 100%);
+  border-radius: 18px;
+  padding: 2rem;
+  box-shadow: 
+    0 10px 30px rgba(0, 0, 0, 0.2),
+    inset 0 0 10px rgba(255, 255, 255, 0.5);
+  transform-style: preserve-3d;
+  transition: transform 0.8s ease;
+}
+
+.card-3d-text {
+  font-size: 1.3rem;
+  color: #ff6d00;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1rem;
+  text-shadow: 
+    1px 1px 0 rgba(0,0,0,0.1),
+    0 0 10px rgba(255,109,0,0.2);
+  transform: translateZ(30px);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  #cake-container {
+    max-width: 90%;
+    margin: 30px 0 15px; /* Reduced bottom margin */
+  }
+
+  #cake-candle-canvas {
+    top: -50px;
+    width: 80px;
+    height: 120px;
+    margin-top: -10px;
+  }
+
+  .text-content {
+    margin-top: -15px;
+    padding: 0 15px;
+  }
+
+  #congrats-message {
+    font-size: 1.3rem;
+    margin: 8px 0;
+    display: block;
+    margin-top: 100px;
+  }
+
+  #celebrate-message {
+    font-size: 1.4rem;
+    margin: 8px 0 12px;
+  }
+
+  .btn-main {
+    padding: 10px 25px;
+    font-size: 1rem;
+    margin-top: 12px;
+  }
+
+  .container h2 {
+    font-size: 1.3rem;
+    margin: 8px 0 4px;
+  }
+  
+  .greeting-card {
+    max-width: 320px;
+    top: 65%; /* Adjusted for mobile */
+  }
+  
+  .card-front {
+    padding: 1.5rem;
+  }
+  
+  .card-3d-text {
+    font-size: 1.1rem;
+  }
+}
+
+/* Desktop Enhancements */
+@media (min-width: 1024px) {
+  #cake-container {
+    max-width: 550px;
+    margin: 50px 0 30px; /* Reduced bottom margin */
+  }
+
+  .text-content {
+    max-width: 550px;
+  }
+
+  #cake-candle-canvas {
+    top: -90px;
+    width: 120px;
+    height: 160px;
+    filter: 
+      drop-shadow(0 0 20px rgba(255, 237, 133, 0.8))
+      drop-shadow(0 0 40px rgba(255, 213, 0, 0.6));
+  }
+
+  #congrats-message {
+    font-size: 1.7rem;
+  }
+
+  #celebrate-message {
+    font-size: 1.9rem;
+  }
+}
