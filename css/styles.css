@@ -30,12 +30,18 @@ body {
 .container {
   width: 100%;
   max-width: 1000px;
-  padding: 20px;
+  min-height: 100vh;
+
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  position: relative;
+
+  text-align: center;
+  padding: 24px;
+  box-sizing: border-box;
 }
+
 
 /* Cake Container */
 #cake-container {
@@ -330,5 +336,22 @@ body {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
+}
+
+h1 {
+  font-size: clamp(26px, 4vw, 46px);
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  text-shadow: 0 8px 30px rgba(0, 0, 0, 0.45);
+}
+p {
+  max-width: 720px;
+  margin-top: 18px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: rgba(230, 238, 243, 0.95);
 }
 
