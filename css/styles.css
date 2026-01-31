@@ -381,20 +381,22 @@ p {
 }
 
 /* Diagonal effect */
+/* TOP PHOTOS */
 .photo.p1 {
-  transform: rotate(-6deg) translate(-6px, 6px);
+  transform: rotate(-6deg) translate(-8px, 6px);
 }
 
 .photo.p2 {
-  transform: rotate(6deg) translate(6px, 6px);
+  transform: rotate(6deg) translate(8px, 6px);
 }
 
+/* BOTTOM PHOTOS */
 .photo.p3 {
-  transform: rotate(6deg) translateY(-6px);
+  transform: rotate(6deg) translate(0px, -6px);
 }
 
 .photo.p4 {
-  transform: rotate(-6deg) translateY(-6px);
+  transform: rotate(-6deg) translate(0px, -6px);
 }
 
 
