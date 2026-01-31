@@ -382,11 +382,11 @@ p {
 
 /* Diagonal effect */
 .photo.p1 {
-  transform: rotate(-6deg) translateY(6px);
+  transform: rotate(-6deg) translate(-6px, 6px);
 }
 
 .photo.p2 {
-  transform: rotate(6deg) translateY(6px);
+  transform: rotate(6deg) translate(6px, 6px);
 }
 
 .photo.p3 {
@@ -396,4 +396,5 @@ p {
 .photo.p4 {
   transform: rotate(-6deg) translateY(-6px);
 }
+
 
