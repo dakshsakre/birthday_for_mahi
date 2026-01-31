@@ -402,3 +402,9 @@ p {
 .bottom-photos .photo {
   margin: 0 10px;
 }
+/* FORCE bottom photos to stay in a row on mobile */
+.bottom-photos {
+  flex-direction: row !important;
+  column-gap: 20px !important;
+}
+
