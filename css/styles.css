@@ -363,11 +363,12 @@ p {
 }
 
 .top-photos {
-  margin-bottom: 28px;
+  margin-top: 36px;
+  margin-bottom: 36px;
 }
 
 .bottom-photos {
-  margin-top: 40px;
+  margin-top: 36px;
 }
 
 /* Base photo style */
@@ -395,3 +396,4 @@ p {
 .photo.p4 {
   transform: rotate(-6deg) translateY(-6px);
 }
+
