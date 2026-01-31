@@ -364,7 +364,7 @@ p {
 
 .top-photos {
   margin-top: 36px;
-  margin-bottom: 34px;
+  margin-bottom: 30px;
 }
 
 .bottom-photos {
@@ -407,5 +407,6 @@ p {
   flex-direction: row !important;
   column-gap: 20px !important;
 }
+
 
 
