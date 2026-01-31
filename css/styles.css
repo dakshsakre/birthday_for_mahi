@@ -372,31 +372,29 @@ p {
 }
 
 /* Base photo style */
+/* PHOTO BASE */
 .photo {
-  width: 160px;
-  height: 160px;
-  object-fit: cover;
+  width: 140px;
+  height: 140px;
   border-radius: 18px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.45);
+  object-fit: cover;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.35);
 }
 
-/* Diagonal effect */
-/* TOP PHOTOS */
+/* TOP ROW */
 .photo.p1 {
-  transform: rotate(-6deg) translate(-8px, 6px);
+  transform: rotate(-5deg);
 }
 
 .photo.p2 {
-  transform: rotate(6deg) translate(8px, 6px);
+  transform: rotate(5deg);
 }
 
-/* BOTTOM PHOTOS */
+/* BOTTOM ROW */
 .photo.p3 {
-  transform: rotate(6deg) translate(0px, -6px);
+  transform: rotate(5deg);
 }
 
 .photo.p4 {
-  transform: rotate(-6deg) translate(0px, -6px);
+  transform: rotate(-5deg);
 }
-
-
