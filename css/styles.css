@@ -398,3 +398,7 @@ p {
 .photo.p4 {
   transform: rotate(-5deg);
 }
+
+.bottom-photos .photo {
+  margin: 0 10px;
+}
