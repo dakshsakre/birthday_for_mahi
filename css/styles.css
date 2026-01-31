@@ -5,19 +5,17 @@
   box-sizing: border-box;
 }
 
+/* ===== BODY / BACKGROUND ===== */
 body {
   margin: 0;
   min-height: 100vh;
-  font-family: 'Segoe UI', system-ui, sans-serif;
-  color: #e5e7eb;
+  font-family: 'Segoe UI', system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+  color: #e6eef3;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 
-  background: linear-gradient(
-    135deg,
-    #020617,
-    #0f766e,
-    #022c22
-  );
-
+  /* Dark teal animated gradient (use this one) */
+  background: linear-gradient(135deg, #021018 0%, #003b3a 45%, #08425a 100%);
   background-size: 200% 200%;
   animation: gradientMove 14s ease infinite;
 
@@ -333,3 +331,4 @@ body {
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
+
