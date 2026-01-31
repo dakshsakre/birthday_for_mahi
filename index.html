@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Birthday Greeting</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <div id="cake-container">
+      <img id="cake-svg-img" src="img/cake.png" alt="Birthday Cake">
+      <canvas id="cake-candle-canvas"></canvas>
+    </div>
+    
+      <div class="greeting-card" id="greeting-card" style="display:none;">
+        <div id="lottie-confetti" style="width:320px;max-width:90vw;margin:0 auto;"></div>
+
+        <!-- متن‌ها و دکمه زیر کیک -->
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 15px; margin-top: 20px;">
+          <div id="congrats-message" style="display: none;">
+            Wishing you the brightest smiles, warmest moments, and a birthday as special as you 🎂✨
+          </div>
+
+          <div id="celebrate-message" style="display: none;">
+            🎉 You did it! Happy Birthday! May all your wishes come true 🎉
+            <audio id="birthday-audio" src="audio/birthday.mp3"></audio>
+          </div>
+
+          <button class="btn btn-secondary" id="reset-btn" style="display: none;">Restart</button>
+        </div>
+      </div>
+
+    <a href="celebrate.html" class="btn-main" style="display:inline-block;text-decoration:none;">click here to see what i made for u !!</a>
+
+
+
+    <p style="margin-top: 20px;">bhondu jii 😙</p>
+    <h2 style="margin-top: 5px;">click the button</h2>
+  </div>
+
+  <script src="https://unpkg.com/lottie-web@5.12.2/build/player/lottie.min.js"></script>
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Happy Birthday 🎉</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="container" style="text-align:center;">
+<h1>
+  Happy Birthday Aarushi (bhondu)
+  <br>
+  <span style="font-size: 1.5rem;">🥳🥳🥳🥳</span>
+</h1>
+
+
+    <p style="margin-top:20px;">
+      Wishing you the brightest smiles, warmest moments,  
+      and a birthday as special as you ✨
+    </p>
+
+<button id="playBtn"
+        style="margin-top:30px;padding:14px 28px;border-radius:999px;
+               border:none;font-size:16px;cursor:pointer;">
+  ▶ Tap to play music
+</button>
+
+<audio id="bg-music" preload="auto">
+  <source src="audio/birthday.mp3" type="audio/mpeg">
+</audio>
+
+  </div>
+
+<script>
+  const btn = document.getElementById('playBtn');
+  const music = document.getElementById('bg-music');
+
+  btn.addEventListener('click', () => {
+    music.volume = 1;
+    music.play().then(() => {
+      btn.style.display = 'none';
+    });
+  });
+</script>
+
+</body>
+</html>
